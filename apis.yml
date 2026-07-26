@@ -1,7 +1,25 @@
 aid: digg
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/digg.png
 name: Digg
-description: Digg is a company surfaced as a portfolio company of a16z, true-ventures and added to the
-  API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: Digg is a technology news aggregation and community curation platform, relaunched
+  under new ownership and backed by Andreessen Horowitz (a16z) and True Ventures. It surfaces
+  trending stories, discussions, and video signals drawn largely from X/Twitter, ranking them
+  by community engagement and editorial signals. The platform tracks contributor rankings,
+  rising stories, today's highlights, and GitHub repository activity, positioning itself as an
+  AI-assisted discovery hub for technology, startups, and AI news. As surfaced here, Digg is a
+  consumer web product with no public developer API, SDKs, or documentation; this profile
+  captures its identity and web/domain-security posture for the API Evangelist network.
 url: https://raw.githubusercontent.com/api-evangelist/digg/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,9 +30,15 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
+- News Aggregation
+- Social News
+- Content Curation
+- Technology
+- Media
+- Artificial Intelligence
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -22,5 +46,16 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/digg-domain-security.yml
 - type: Website
-  url: https://di.gg/ai
+  url: https://digg.com/ai
+- type: TermsOfService
+  url: https://digg.com/tos
+- type: PrivacyPolicy
+  url: https://digg.com/privacy
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
