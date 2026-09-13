@@ -1,0 +1,25 @@
+generated: '2026-09-11'
+method: probed
+source: https://digg.com/mcp
+status: published
+server:
+  name: digg
+  transport: http
+  url: https://digg.com/mcp
+deployment:
+  mode: remote
+  endpoint: https://digg.com/mcp
+  verified: probed
+  probe: live
+  checked: '2026-09-11'
+  source: docs-check 2026-09-12 (endpoint found in the provider's own documentation, then probed)
+tools_count: 3
+tools:
+- name: digg_get_feed
+  description: ''
+- name: digg_search_stories
+  description: ''
+- name: digg_get_story
+  description: ''
+tools_source: live tools/list via initialize handshake, 2026-09-12 (signals/audit_mcp_authorship.py --probe)
+authorship: provider
