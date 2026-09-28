@@ -16,10 +16,18 @@ deployment:
 tools_count: 3
 tools:
 - name: digg_get_feed
-  description: ''
+  description: Read published Technology stories in Top, Newest, Best, or Hot order. Top defaults to the
+    current Pacific day. Continue with nextCursor and unchanged selection; stop when it is null. Live
+    rankings may move stories between pages; deduplicate
 - name: digg_search_stories
-  description: ''
+  description: Search recent Technology story titles and TLDRs using Digg semantic and keyword search.
+    Searches live Clusters from the last 90 days and returns only currently published stories. Returns
+    at most limit matches from 80 candidates; this is not
 - name: digg_get_story
-  description: ''
+  description: Get published Technology story copy and a page of attributed X or webpage sources by UUID.
+    Live and archived stories are readable; a story merged into another returns the surviving story, so
+    the returned id and url may differ from the reque
 tools_source: live tools/list via initialize handshake, 2026-09-12 (signals/audit_mcp_authorship.py --probe)
 authorship: provider
+descriptions_source: live tools/list (authorship probe or saved capture); filled by backfill-tools-from-authorship.py
+  --descriptions, 2026-09-28
